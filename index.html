@@ -21,6 +21,25 @@
             width: 100%;
         }
     </style>
+    <script>
+        function openTab(event, inform){
+            let tabPage, tablinks;
+            // tabPage = document.querySelector('.tabPage');
+            tabPage = document.getElementsByClassName('tabPage');
+            tablinks = document.getElementsByClassName('tablinks');
+    
+            for(let i=0; i<tabPage.length; i++){
+                tabPage[i].style.display = 'none';
+            }
+    
+            for(let i=0; i<tablinks.length; i++){
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+    
+            document.getElementById(inform).style.display = 'block';
+            event.currentTarget.className += " active";
+        }
+    </script>
 </head>
 
 <body>
@@ -88,9 +107,9 @@
             <!-- 탭 부분 -->
             <div class="tabMenu">
                 <div class="tabTitle">
-                    <button class="tablinks">공지사항</button>
-                    <button class="tablinks">문화행사</button>
-                    <button class="tablinks">책바다</button>
+                    <button class="tablinks" onclick="openTab(event, 'inform1')">공지사항</button>
+                    <button class="tablinks" onclick="openTab(event, 'inform2')">문화행사</button>
+                    <button class="tablinks" onclick="openTab(event, 'inform3')">책바다</button>
                 </div>
                 <!-- 공지사항 -->
                 <div id="inform1" class="tabPage tablinkInit">
