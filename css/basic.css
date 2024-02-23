@@ -1,0 +1,32 @@
+
+html, body, head, div, span,p, header,nav, section, article, aside, footer, h1,
+h2,h3, h4, h5, h6, hr, ol, ul, li, a, img, iframe, table, thead, tbody, tfoot, tr, th, td,
+form, input, label, button, select, textarea, br
+{/*전체 선택자 (*) : 페이지의 모든 요소에 대한 스타일 적용*/
+    margin: 0px;
+    padding: 0px;
+    /*font-size: 100%;*/
+}
+
+body{
+    width: 960px; /*크기는 12로 나누어 떨어지는 값 : 그리드 사용시 가장 적절*/
+    margin: 0px auto; /*상하는 0, 좌우는 가운데 정렬*/
+}
+
+ol,ul,li{
+    list-style: none; /*목록 기호 지우기*/
+}
+
+a, a:visited{
+    text-decoration: none; /*밑줄 지우기*/
+    color: black;
+}
+
+img{
+    border: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
